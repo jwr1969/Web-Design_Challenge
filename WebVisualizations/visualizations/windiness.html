@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Responsive Columns</title>
+  <title>Humidity</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="..\style.css">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
     <!--Header row contains 3 elemnts: slide title, spacer and navigation-->
 
     <div class="row">
-      <div class="col-sm-3 col-md-3">
+      <div class="col-12 col-sm-3 col-md-3">
         <div class="box page-title"><a href="..\index.html">Latitude</a></div>
       </div>
       
@@ -22,7 +22,7 @@
         <div class="spacer">
         </div>
       
-      <div class="col-sm-6 col-md-4">
+      <div class="col-12 col-sm-6 col-md-4">
         
         <!--Normally these medium columns go full wide on small screen sizes-->
 
@@ -35,10 +35,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="visualizations/comparisons.html">Comparison <span class="sr-only"></span></a>
+                <a class="nav-link" href="comparisons.html">Comparison <span class="sr-only"></span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="visualizations/data_table.html">Data</a>
+                <a class="nav-link" href="data_table.html">Data</a>
               </li>
         
               <li class="nav-item dropdown">
@@ -46,10 +46,10 @@
                 Plot
               </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="visualizations\max_temp.html">Max. Temp</a>
-                  <a class="dropdown-item" href="visualizations\humidity.html">Humidity</a>
-                  <a class="dropdown-item" href="visualizations\windiness.html">Windiness</a>
-                  <a class="dropdown-item" href="visualizations\cloudiness.html">Cloudiness</a>
+                  <a class="dropdown-item" href="max_temp.html">Max. Temp</a>
+                  <a class="dropdown-item" href="humidity.html">Humidity</a>
+                  <a class="dropdown-item" href="windiness.html">Windiness</a>
+                  <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
                 </div>
               </li>
             </ul>
@@ -72,22 +72,22 @@
       </div>
       <div class="col-sm-12 col-md-7">
         <div class="content main-content">
-          <h1>Summary: Latitude versus X</h1>
+          <h1>Windiness</h1>
           <hr>
           <br>
           
-          <img class="img-responsive" src="Resources\Scatter_Plot_MaxTemp.png" alt="MaxTemp">
-          <p>In this example, I created a Python script to visualize the weather of 500+ cities across the world of varying distance from the equator. To accomplish this, I used a [simple Python library] (https://pypi.python.org/pypi/citipy), and the [OpenWeatherMap API] (https://openweathermap.org/api. The code randomly selects 500 unique (non-repeat) cities based on latitude and longitude removing duplicates and skipping cities where no data is returned by the OpenWeatherMap – it takes about 1300 requests to generate 500 unique results. A FUCK histogram of frequency of requested latitudes and returned latitudes and frequency of requested and returned longitudes versus longitude was plotted to ensure the data points represented the full range of possible city locations.</p>
+          <img class="img-responsive" src="..\Resources\Scatter_Plot_Wind_Speed.png"/>
+          <p>Windiness (mph) shows no correlation with latitidue for either hemisphere. This was a snapshot in time - wind speeds can vary!</p>
           
         </div>
       </div>
       <div class="col-sm-12 col-md-3">
         <div class="content sidebar-content">
             <h6>Visualizations</h6>
-                <a href="visualizations/max_temp.html"><img  class="img-reponsive" width="150" src="Resources\Scatter_Plot_MaxTemp.png" alt="Plot_MaxtTemp"></a>
-                <a href="visualizations/humidity.html"><img  class="img-reponsive" width="150" src="Resources\Scatter_Plot_Humidity.png" alt="Plot_Humidity"></a>
-                <a href="visualizations/cloudiness.html"><img  class="img-reponsive" width="150" src="Resources\Scatter_Plot_Cloudiness.png" alt="Plot_Cloudiness"></a>
-                <a href="visualizations/windiness.html"><img  class="img-reponsive" width="150" src="Resources\Scatter_Plot_Wind_Speed.png" alt="Plot_Windiness"></a>
+                <a href="max_temp.html"><img width="150" src="..\Resources\Scatter_Plot_MaxTemp.png"></a>
+                <a href="humidity.html"><img width="150" src="..\Resources\Scatter_Plot_Humidity.png"></a>
+                <a href="cloudiness.html"><img width="150" src="..\Resources\Scatter_Plot_Cloudiness.png"></a>
+                <a href="windiness.html"><img width="150" class="newbox" src="..\Resources\Scatter_Plot_Wind_Speed.png"></a>
         </div>
       </div>
     </div>
